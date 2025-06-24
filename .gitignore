@@ -100,10 +100,19 @@ venv.bak/
 # mkdocs documentation
 /site
 
-# mypy
+# MyPy
 .mypy_cache/
 .dmypy.json
 dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pyright
+.pyright
+
+# pytest
+.pytest_cache/
+
+# VS Code
+.vscode/
