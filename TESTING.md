@@ -1,6 +1,7 @@
 # Testing Guidelines
 
-This document provides instructions for running the unit tests for the `claude-code-automated` project.
+This document provides instructions for running the unit tests for the
+`claude-code-automated` project.
 
 ## 1. Install Python (if not already installed)
 
@@ -10,7 +11,8 @@ This document provides instructions for running the unit tests for the `claude-c
 choco install python --pre
 ```
 
-- On Linux/macOS, use your package manager or download from [python.org](https://www.python.org/downloads/).
+- On Linux/macOS, use your package manager or download from
+  [python.org](https://www.python.org/downloads/).
 
 ## 2. Create and Activate a Virtual Environment
 

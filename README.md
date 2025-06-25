@@ -1,15 +1,24 @@
 # Claude Code Automated
 
-Claude Code Automated is a modular Python tool for automating batch interactions with the Claude API, following best practices for agentic, autonomous development. It is designed to streamline the process of planning, executing, and applying code changes at scale.
+Claude Code Automated is a modular Python tool for automating batch
+interactions with the Claude API, following best practices for agentic,
+autonomous development. It is designed to streamline the process of planning,
+executing, and applying code changes at scale.
 
 ## Features
 
-- **Plan Generation**: Parses a `PLANNING.md` file to generate detailed, independent prompts for the Claude Batch API.
-- **Batch Execution**: Submits the generated prompts to the Claude Batch API and monitors their progress asynchronously.
-- **Result Processing**: Retrieves and saves results from the batch API, handling errors and edge cases robustly.
-- **Automated Code Updates**: Applies the results from the batch API to the codebase, supporting safe, repeatable updates.
-- **Comprehensive Unit Tests**: Includes a full test suite for all modules, ensuring reliability and maintainability.
-- **Modular Architecture**: Separates CLI, command logic, API integration, and utilities for clarity and extensibility.
+- **Plan Generation**: Parses a `PLANNING.md` file to generate detailed,
+  independent prompts for the Claude Batch API.
+- **Batch Execution**: Submits the generated prompts to the Claude Batch API
+  and monitors their progress asynchronously.
+- **Result Processing**: Retrieves and saves results from the batch API,
+  handling errors and edge cases robustly.
+- **Automated Code Updates**: Applies the results from the batch API to the
+  codebase, supporting safe, repeatable updates.
+- **Comprehensive Unit Tests**: Includes a full test suite for all modules,
+  ensuring reliability and maintainability.
+- **Modular Architecture**: Separates CLI, command logic, API integration,
+  and utilities for clarity and extensibility.
 
 ## Project Structure
 

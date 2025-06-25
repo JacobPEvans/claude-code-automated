@@ -23,7 +23,8 @@ To create a Python tool to automate Claude API batch calls for autonomous develo
 
 ### 📋 Remaining Tasks
 
-*No high-priority tasks remain. All major planned features, modularization, and comprehensive unit tests have been completed as of 2025-06-24.*
+*No high-priority tasks remain. All major planned features, modularization,
+and comprehensive unit tests have been completed as of 2025-06-24.*
 
 *For a record of completed work, see [CHANGELOG.md](CHANGELOG.md).*
 
