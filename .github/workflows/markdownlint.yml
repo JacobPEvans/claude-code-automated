@@ -20,4 +20,4 @@ jobs:
       - name: Run markdownlint-cli
         run: |
           npm install -g markdownlint-cli
-          markdownlint **/*.md --ignore node_modules
+          markdownlint **/*.md --ignore node_modules --config .markdownlint.yml
