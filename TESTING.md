@@ -59,7 +59,7 @@ pip install python-dotenv
 
 - Example `.env`:
 
-```
+```env
 ANTHROPIC_API_KEY=your-key-here
 ```
 

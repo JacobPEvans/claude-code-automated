@@ -19,10 +19,12 @@ class TestFileUtils(unittest.TestCase):
 
     def test_parse_tasks_from_planning_md(self):
         content = """### 📋 Remaining Tasks
+
 - Task 1
 - Task 2
 
 ## Next Section"""
+
         tasks = parse_tasks_from_planning_md(content)
         self.assertEqual(tasks, ["Task 1", "Task 2"])
 

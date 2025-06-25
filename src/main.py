@@ -8,7 +8,6 @@ from src.commands.update import update_command
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-
 async def main():
     parser = create_parser()
     args = parser.parse_args()
@@ -19,7 +18,6 @@ async def main():
         await execute_command(args)
     elif args.command == "update":
         update_command(args)
-
 
 if __name__ == "__main__":
     asyncio.run(main())
