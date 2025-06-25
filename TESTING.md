@@ -53,7 +53,8 @@ pytest --cov=src
 
 ## 6. Environment Variables
 
-- Use a `.env` file for sensitive or environment-specific variables. Install `python-dotenv` if needed:
+- Use a `.env` file for sensitive or environment-specific variables. Install
+  `python-dotenv` if needed:
 
 ```bash
 pip install python-dotenv
