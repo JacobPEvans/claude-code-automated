@@ -9,13 +9,15 @@ def update_command(args):
     logging.info(f"Updating project in: {args.project_dir}")
     results_dir = args.results_dir
 
-    if not os.path.isdir(results_dir):
-        logging.error(f"Results directory not found: {results_dir}")
+    succeeded_dir = os.path.join(results_dir, 'succeeded')
+
+    if not os.path.isdir(succeeded_dir):
+        logging.error(f"Succeeded directory not found: {succeeded_dir}")
         return
 
-    for filename in os.listdir(results_dir):
+    for filename in os.listdir(succeeded_dir):
         if filename.endswith(".txt"):
-            result_filepath = os.path.join(results_dir, filename)
+            result_filepath = os.path.join(succeeded_dir, filename)
             content = read_file(result_filepath)
 
             if not content:

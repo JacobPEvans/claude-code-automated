@@ -1,7 +1,10 @@
 import asyncio
 import logging
-from src.claude_api import get_anthropic_client, poll_batch_completion, process_batch_results
-from src.file_utils import read_file, parse_prompts_from_planning_md, write_batch_results
+from src.claude_api import get_llm_provider
+from src.file_utils import read_file
+from src.planning import parse_prompts_from_planning_md
+from src.file_utils import write_batch_results
+from src import config
 
 async def execute_command(args):
     """
@@ -21,7 +24,7 @@ async def execute_command(args):
     logging.info(f"Found {len(prompts_for_api)} prompts to execute.")
 
     try:
-        client = get_anthropic_client()
+        provider = get_llm_provider()
         requests = []
         for p in prompts_for_api:
             requests.append(
@@ -30,8 +33,8 @@ async def execute_command(args):
                     "method": "POST",
                     "url": "/v1/messages",
                     "body": {
-                        "model": "claude-3-opus-20240229",
-                        "max_tokens": 4096,
+                        "model": config.MODEL_NAME,
+                        "max_tokens": config.MAX_TOKENS,
                         "system": "You are an expert Python developer. Implement complete, production-ready code with error handling, documentation, and tests.",
                         "messages": [{"role": "user", "content": p["content"]}],
                     },
@@ -39,15 +42,15 @@ async def execute_command(args):
             )
 
         logging.info("Submitting batch request to Claude API...")
-        batch = await client.messages.batches.create(requests=requests)
+        batch = await provider.create_batch(requests=requests)
         logging.info(f"Batch request submitted. Batch ID: {batch.id}")
 
         logging.info("Waiting for batch to complete...")
-        completed_batch = await poll_batch_completion(client, batch.id)
+        completed_batch = await provider.poll_batch(batch.id)
 
         if completed_batch:
             logging.info("Batch completed. Processing results...")
-            results = await process_batch_results(client, completed_batch.id)
+            results = await provider.process_batch_results(completed_batch.id)
             write_batch_results(results, args.output_dir)
             logging.info(f"Results saved to {args.output_dir}")
             if results["failed"]:

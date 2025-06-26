@@ -1,10 +1,7 @@
 import logging
-from src.file_utils import (
-    read_file,
-    parse_tasks_from_planning_md,
-    update_planning_md_with_prompts,
-    write_file,
-)
+from src.file_utils import read_file, write_file
+from src.planning import parse_tasks_from_planning_md, update_planning_md_with_prompts
+from src import config
 
 def plan_command(args):
     """
