@@ -1,5 +1,36 @@
 # Changelog
 
+## 2025-06-26
+
+### Changed
+
+- Migrated entire test suite from `unittest` to `pytest` framework for better maintainability and modern testing practices.
+- Introduced abstract LLM provider pattern with `AnthropicProvider` implementation for future extensibility.
+- Extracted planning functions into dedicated `src/planning.py` module for better code organization.
+- Added centralized configuration management in `src/config.py` for improved maintainability.
+- Enhanced test infrastructure with `conftest.py` shared fixtures and `pytest-asyncio` support.
+- Improved file system testing using `tmp_path` fixture for better test isolation.
+
+### Added
+
+- New `src/llm_providers.py` module with abstract `LLMProvider` base class.
+- New `src/planning.py` module containing planning-related parsing functions.
+- New `src/config.py` module for centralized configuration constants.
+- New `tests/conftest.py` with shared test fixtures.
+- New `tests/test_planning.py` for testing planning functionality.
+- Added `pytest-asyncio` dependency for improved async test handling.
+- Added `.local.*` to `.gitignore` for AI-generated temporary files.
+
+## 2025-06-25
+
+### Changed
+
+- Refactored the entire test suite to use `pytest` best practices, including:
+  - Replacing `unittest` with `pytest` functions and assertions.
+  - Adding `pytest-asyncio` for improved asynchronous test handling.
+  - Creating a `conftest.py` file for shared test fixtures.
+  - Using the `tmp_path` fixture for file system operations in tests.
+
 ## 2025-06-24
 
 ### Added
@@ -16,7 +47,7 @@
 - Added comprehensive unit tests for all modules in `tests/`.
 - Established best-practice documentation and project structure.
 
-### Changed
+### Updated
 
 - Refactored codebase for modularity and maintainability (moved CLI and
   commands to separate modules).
