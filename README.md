@@ -1,6 +1,7 @@
 > [!WARNING]
->
-> This repository has been archived. It was a cool idea, and it will still be fun to work on automating multiple AI agents, but so much has changed since this was built that it's too out of date to be worth anything.
+> Repository Archived — This project explored autonomous batch processing with the Claude API for agentic development workflows. While the architecture and approach remain conceptually valid, the rapid evolution of AI tooling and API capabilities has rendered the implementation obsolete.
+> 
+> The codebase is preserved for historical reference and may inspire future iterations, but active development has ceased in favor of leveraging more current, native solutions in the AI orchestration space.
 
 
 # Claude Code Automated
