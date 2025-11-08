@@ -1,3 +1,8 @@
+> [!WARNING]
+>
+> This repository has been archived. It was a cool idea, and it will still be fun to work on automating multiple AI agents, but so much has changed since this was built that it's too out of date to be worth anything.
+
+
 # Claude Code Automated
 
 Claude Code Automated is a modular Python tool for automating batch
